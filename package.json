@@ -1,0 +1,35 @@
+{
+  "name": "json-schema-generate",
+  "description": "It`s jQuery library that make Json based on JsonSchema",
+  "version": "0.0.1-alpha",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Park9eon/json-schema-generate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Park9eon/json-schema-generate/issues"
+  },
+  "homepage": "https://github.com/Park9eon/json-schema-generate#readme",
+  "scripts": {
+    "bundle": "browserify src/jsg.js > dist/bundle.js | uglifyjs dist/bundle.js > dist/bundle.min.js"
+  },
+  "keywords": [
+    "json",
+    "json",
+    "schema",
+    "json",
+    "schema",
+    "generate",
+    "javascript"
+  ],
+  "author": {
+    "name": "park9eon",
+    "email": "quiet9.noise@gmail.com",
+    "url": "http://park9eon.com/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "codemirror": "^5.25.0",
+    "jquery": "^3.2.1"
+  }
+}

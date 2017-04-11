@@ -1,0 +1,75 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+	<style>
+		textarea {
+			width: 100px;
+			height: 100px;
+			margin: 16px;
+		}
+		.full-parent {
+			width: 100%;
+			padding: 6px;
+		}
+	</style>
+	<script src="../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../node_modules/codemirror/lib/codemirror.js"></script>
+	<script src="../node_modules/codemirror/mode/javascript/javascript.js"></script>
+	<script src="jsg.js"></script>
+	<script>
+		$(document).ready(function () {
+			function bind(json, schema) {
+
+				var jsonString = json.getValue();
+				console.log(jsonString);
+				var obj = JSON.parse(jsonString);
+				schema.setValue(JSON.stringify(jsg(obj), null, 4));
+			}
+			var jsonEditor = CodeMirror.fromTextArea(document.getElementById("json"), {
+				lineNumbers: true,
+				mode:  {name: "javascript", json: true}
+			});
+			var schemaViewer = CodeMirror.fromTextArea(document.getElementById("schema"), {
+				lineNumbers: true,
+				readOnly: true,
+				mode:  {name: "javascript", json: true}
+			});
+
+			$("#button").click(function() {
+				bind(jsonEditor, schemaViewer);
+			});
+
+			var defaultJson = {
+				id : 10,
+				name : "park",
+				age : 16,
+				weight : {
+					value : 65.2,
+					unit : "kg"
+				},
+				friends : [
+					"John", "Kim", "Brown", "Smith"
+				],
+				contact : [{
+					"name" : "phone",
+					"number" : "010-1234-1234",
+					"description" : "iPhone"
+				}, {
+					"name" : "email",
+					"email" : "quiet9.noise@gmail.com"
+				}]
+			};
+			jsonEditor.setValue(JSON.stringify(defaultJson, null, 4));
+			bind(jsonEditor, schemaViewer);
+		});
+	</script>
+</head>
+<body>
+	<textarea id="json"></textarea>
+	<div class="full-parent">
+		<button id="button">generate</button>
+	</div>
+	<textarea id="schema"></textarea>
+</body>
+</html>

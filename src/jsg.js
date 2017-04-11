@@ -1,4 +1,3 @@
-
 "use strict";
 /**
  * javascript json object
