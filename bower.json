@@ -1,0 +1,27 @@
+{
+  "name": "json-schema-generate",
+  "description": "It`s jQuery library that make Json based on JsonSchema",
+  "main": "dist/jsg.min.js",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "json",
+    "json",
+    "schema",
+    "json",
+    "schema",
+    "generate",
+    "javascript"
+  ],
+  "homepage": "https://github.com/Park9eon/json-schema-generate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "docs"
+  ]
+}
