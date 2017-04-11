@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/Park9eon/json-schema-generate#readme",
   "scripts": {
-    "bundle": "browserify src/jsg.js > dist/bundle.js | uglifyjs dist/bundle.js > dist/bundle.min.js"
+    "create-min": "uglifyjs src/jsg.js > dist/jsg.min.js | uglifyjs src/jsg.js > docs/scripts/jsg.min.js"
   },
   "keywords": [
     "json",
