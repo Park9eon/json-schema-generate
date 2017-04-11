@@ -18,7 +18,7 @@ It has depend `jQuery.type()` method so you should be using jquery.
 
 **[DEMO](http://park9eon.com/json-schema-generate/)**
 
-![](screenshot.png)
+![](/screenshot.png)
 
 # TODO
 
